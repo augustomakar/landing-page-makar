@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			div {
+				/* border: 1px solid black; */
+			}
+
+			.price-container {
+				display: flex;
+				flex-direction: column;
+				background-color: gainsboro;
+			}
+
+			.price-title {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				padding: 20px;
+			}
+
+			.price-title-p1 {
+				font-size: 3.8rem;
+				font-weight: lighter;
+				color: rgb(29, 27, 27);
+			}
+
+			.price-title-p2 {
+				color: gray;
+				font-weight: bold;
+				letter-spacing: 5px;
+				font-size: 1.1rem;
+			}
+
+			.price-table {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				padding: 20px 200px;
+			}
+
+			.price-cards {
+				width: 33.33%;
+				display: flex;
+				flex-direction: column;
+				padding: 10px;
+				align-items: center;
+				justify-content: center;
+				gap: 30px;
+				height: 90%;
+				background-color: white;
+				border-radius: 10px;
+			}
+
+			.price-card-branco-texto1 {
+				color: rgb(29, 27, 27);
+				font-weight: 500;
+				letter-spacing: 2px;
+			}
+
+			.price-card-branco-texto2 {
+				font-size: 2rem;
+				font-weight: lighter;
+				color: gray;
+			}
+
+			.price-card-branco-texto3 {
+				font-size: 3.8rem;
+				font-weight: lighter;
+				color: rgb(29, 27, 27);
+			}
+
+			.price-card-branco-texto4 {
+				color: white;
+				border-bottom: 1px solid white;
+			}
+
+			.price-card-branco-texto5 {
+				color: gray;
+			}
+
+			.price-card-branco-button {
+				width: 150px;
+				height: 60px;
+				background-color: white;
+				border: 2px solid green;
+				border-radius: 40px;
+				color: green;
+				font-weight: bold;
+				margin-top: 35px;
+			}
+
+			/* .price-card-white {
+				height: 100%;
+			} */
+
+			.price-card-black {
+				background-color: black;
+				height: 100%;
+				padding: 40px;
+			}
+
+			/* .card-black {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				padding: 100px;
+				gap: 20px;
+				background-color: black;
+				height: 100%;
+			} */
+
+			.price-card-black {
+				/* display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				padding: 50px;
+				gap: 20px;
+				background-color: black;
+				height: 100%; */
+			}
+
+			@media (max-width: 600px) {
+				.price-table {
+					flex-direction: column;
+					padding: 10px;
+					gap: 20px;
+				}
+
+				.price-cards {
+					width: 70%;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<section>
+			<div class="price-container">
+				<div class="price-title">
+					<p class="price-title-p1">Planos</p>
+					<p class="price-title-p2">Valores Mensais</p>
+				</div>
+				<div class="price-table">
+					<div class="price-cards price-card-white">
+						<p class="price-card-branco-texto1">MEI</p>
+						<p class="price-card-branco-texto1">A PARTIR DE</p>
+						<p class="price-card-branco-texto2">
+							R$ <span class="price-card-branco-texto3">89</span>
+						</p>
+						<p class="price-card-branco-texto4">MEI</p>
+						<p class="price-card-branco-texto5">SEM FUNCIONÁRIOS</p>
+						<p class="price-card-branco-texto5">
+							PRESTAÇÃO DE SERVIÇOS
+						</p>
+						<button class="price-card-branco-button">
+							QUERO ESSE !
+						</button>
+					</div>
+
+					<div class="price-cards price-card-black">
+						<p class="price-card-branco-texto1">MEI</p>
+						<p class="price-card-branco-texto1">A PARTIR DE</p>
+						<p class="price-card-branco-texto2">
+							R$ <span class="price-card-branco-texto3">89</span>
+						</p>
+						<p class="price-card-branco-texto4">MEI</p>
+						<p class="price-card-branco-texto5">SEM FUNCIONÁRIOS</p>
+						<p class="price-card-branco-texto5">
+							PRESTAÇÃO DE SERVIÇOS
+						</p>
+						<button class="price-card-branco-button">
+							QUERO ESSE !
+						</button>
+					</div>
+
+					<div class="price-cards price-card-white">
+						<p class="price-card-branco-texto1">MEI</p>
+						<p class="price-card-branco-texto1">A PARTIR DE</p>
+						<p class="price-card-branco-texto2">
+							R$ <span class="price-card-branco-texto3">89</span>
+						</p>
+						<p class="price-card-branco-texto4">MEI</p>
+						<p class="price-card-branco-texto5">SEM FUNCIONÁRIOS</p>
+						<p class="price-card-branco-texto5">
+							PRESTAÇÃO DE SERVIÇOS
+						</p>
+						<button class="price-card-branco-button">
+							QUERO ESSE !
+						</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- <section class="valores">
+        
+			<div class="valores-title">
+
+			</div>
+
+			<div class="valores-cards">
+				<div class="valores-card">
+
+				</div>
+
+				<div class="card-black">
+					<p class="card-branco-texto1">MEI</p>
+					<p class="card-branco-texto1">A PARTIR DE</p>
+					<p class="card-branco-texto2">
+						R$ <span class="card-branco-texto3">89</span>
+					</p>
+					<p class="card-branco-texto4">MEI</p>
+					<p class="card-branco-texto5">SEM FUNCIONÁRIOS</p>
+					<p class="card-branco-texto5">PRESTAÇÃO DE SERVIÇOS</p>
+					<button class="card-branco-button">QUERO ESSE !</button>
+				</div>
+
+				<div class="valores-card">
+					<p class="card-branco-texto1">MEI</p>
+					<p class="card-branco-texto1">A PARTIR DE</p>
+					<p class="card-branco-texto2">
+						R$ <span class="card-branco-texto3">89</span>
+					</p>
+					<p class="card-branco-texto4">MEI</p>
+					<p class="card-branco-texto5">SEM FUNCIONÁRIOS</p>
+					<p class="card-branco-texto5">PRESTAÇÃO DE SERVIÇOS</p>
+					<button class="card-branco-button">QUERO ESSE !</button>
+				</div>
+			</div>
+		</section> -->
+	</body>
+</html>

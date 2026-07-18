@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+
+	<style>
+		.panel-diferenciais {
+			background-color: white;
+			padding: 60px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.panel-diferenciais-titulo {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 30px;
+			padding-bottom: 70px;
+		}
+
+		.panel-diferenciais p {
+			font-size: 3.8rem;
+			font-weight: lighter;
+		}
+
+		.panel-diferenciais span {
+			color: gray;
+			font-weight: bold;
+			letter-spacing: 3px;
+		}
+
+		.panel-diferenciais-detalhamento {
+			display: flex;
+			justify-content: space-between;
+			padding: 0 150px;
+			gap: 60px;
+		}
+
+		.panel-diferenciais-detalhamento-itens {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 40px;
+		}
+
+		.panel-diferenciais-detalhamento-itens p {
+			font-size: 1.2rem;
+			font-weight: bold;
+			letter-spacing: 2px;
+			color: rgb(29, 27, 27);
+		}
+
+		.panel-diferenciais-detalhamento-itens span {
+			font-size: 1rem;
+			font-weight: lighter;
+			letter-spacing: normal;
+			text-align: center;
+		}
+
+		.nossos-servicos-section {
+			padding: 0px 110px 110px 110px;
+			background-color: white;
+		}
+
+		.nossos-servicos {
+			display: grid;
+			grid-template-columns: 1fr 2fr 1fr 2fr;
+			grid-template-rows: 1fr 1f 1fr;
+			gap: 30px;
+		}
+
+		.nossos-servicos img {
+			height: 165px;
+			width: 165x;
+			opacity: 60%;
+		}
+
+		.nossos-servicos span {
+			font-weight: bold;
+			letter-spacing: 2px;
+			font-size: 0.8rem;
+			color: rgb(29, 27, 27);
+		}
+
+		.nossos-servicos p {
+			font-size: 1rem;
+			color: gray;
+			line-height: 25px;
+		}
+
+		@media (max-width: 600px) {
+			.nossos-servicos {
+				display: grid;
+				grid-template-columns: 1fr 2fr;
+				grid-template-rows: auto;
+				gap: 30px;
+			}
+
+			.nossos-servicos-section {
+				padding: 20px;
+			}
+
+			.panel-diferenciais {
+				padding: 10px;
+			}
+		}
+	</style>
+
+	<body>
+		<section class="nossos-servicos-section">
+			<div class="panel-diferenciais">
+				<p>Nossos Serviços</p>
+			</div>
+
+			<div class="nossos-servicos">
+				<div>
+					<img
+						src="./assets/pessoal.png"
+						alt="" />
+				</div>
+				<div>
+					<span>DEPARTAMENTO PESSOAL</span>
+					<p>&nbsp;</p>
+					<p>
+						Abrange todos os serviços relacionados a folha de
+						pagamento e manutenção do cadastro de funcionários,
+						assim como registro dos funcionários, de forma
+						integrada.
+					</p>
+				</div>
+
+				<div>
+					<img
+						src="./assets/contabilidade.png"
+						alt="" />
+				</div>
+				<div>
+					<span>CONTABILIDADE</span>
+					<p>&nbsp;</p>
+					<p>
+						A escrituração contábil é planejada e executada de
+						acordo com as Normas Internacionais de Contabilidade –
+						IFRS, adequadas à individualidade de cada empresa e às
+						características das atividades desenvolvidas.
+					</p>
+				</div>
+
+				<div>
+					<img
+						src="./assets/escrita.png"
+						alt="" />
+				</div>
+				<div>
+					<span>ESCRITA FISCAL</span>
+					<p>&nbsp;</p>
+					<p>
+						Prestamos assessoria a pessoas físicas e jurídicas sobre
+						questões tributárias e legais, com a apuração dos
+						devidos impostos e entrega das obrigações acessórias.
+					</p>
+				</div>
+
+				<div>
+					<img
+						src="./assets/pericia.png"
+						alt="" />
+				</div>
+				<div>
+					<span>PERÍCIA</span>
+					<p>&nbsp;</p>
+					<p>
+						Efetuamos cálculos periciais e elaboramos laudos e
+						pareceres técnicos.
+					</p>
+				</div>
+
+				<div>
+					<img
+						src="./assets/bpo.png"
+						alt="" />
+				</div>
+				<div>
+					<span>BPO FINANCEIRO</span>
+					<p>&nbsp;</p>
+					<p>
+						EEconomize terceirizando seu departamento financeiro.
+						Fazemos o contas a pagar/receber, boletos e emissão de
+						notas fiscais.
+					</p>
+				</div>
+
+				<div>
+					<img
+						src="./assets/consultoria.png"
+						alt="" />
+				</div>
+				<div>
+					<span>CONSULTORIA</span>
+					<p>&nbsp;</p>
+					<p>
+						Prestamos consultoria para as empresas visando melhorar
+						seus processos internos, precificação, tributação, etc.
+					</p>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>

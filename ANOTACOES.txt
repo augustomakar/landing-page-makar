@@ -1,0 +1,47 @@
+1. Usando a tag <link> dentro do Shadow DOM (Mais simples)
+
+class MeuCard extends HTMLElement {
+  constructor() {
+    super();
+    this.attachShadow({ mode: 'open' });
+  }
+
+  connectedCallback() {
+    this.shadowRoot.innerHTML = `
+      <!-- O navegador carrega o CSS externo apenas para este componente -->
+      <link rel="stylesheet" href="./meu-card.css">
+      
+      <div class="card">
+        <slot></slot>
+      </div>
+    `;
+  }
+}
+customElements.define('meu-card', MeuCard);
+
+
+
+2. Usando CSS Modules com Import nativo (Mais moderno)
+
+// Importa o arquivo CSS externo como um módulo de estilo nativo
+
+import meuEstilo from './meu-card.css' assert { type: 'css' };
+
+class MeuCard extends HTMLElement {
+  constructor() {
+    super();
+    this.attachShadow({ mode: 'open' });
+    
+    // Aplica o estilo diretamente na árvore do Shadow DOM
+    this.shadowRoot.adoptedStyleSheets = [meuEstilo];
+  }
+
+  connectedCallback() {
+    this.shadowRoot.innerHTML = `
+      <div class="card">
+        <slot></slot>
+      </div>
+    `;
+  }
+}
+customElements.define('meu-card', MeuCard);
