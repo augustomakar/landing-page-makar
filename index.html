@@ -1,231 +1,55 @@
 <!doctype html>
 <html lang="pt-BR">
-	<head>
-		<meta charset="UTF-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
-		<link
-			rel="stylesheet"
-			href="style.css" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css" />
 
-		<script
-			type="module"
-			src="./src/componentes/footer/FooterComp.js"></script>
-	</head>
+        <script type="module" src="./src/componentes/MeuCard.js"></script>
+        <script type="module" src="./src/componentes/Header.js"></script>
+        <script type="module" src="./src/componentes/Apresentacao.js"></script>
+        <script type="module" src="./src/componentes/Diferenciais.js"></script>
+        <script type="module" src="./src/componentes/Custos.js"></script>
+        <script type="module" src="./src/componentes/Servicos.js"></script>
+        <script type="module" src="./src/componentes/Precos.js"></script>
+        <script type="module" src="./src/componentes/Contato.js"></script>
+        <script type="module" src="./src/componentes/Footer.js"></script>
+    </head>
 
-	<body>
-		<div class="container">
-			<header>
-				<img
-					src="./assets/logo.png"
-					alt="" />
-				<ul>
-					<a href=""><li>HOME</li></a>
-					<a href=""><li>SERVIÇOS</li></a>
-					<a href=""><li>PLANOS</li></a>
-					<a href=""><li>CONTATO</li></a>
-				</ul>
-			</header>
+    <body>
+        <div class="hero-section">
+            <comp-header></comp-header>
+            <comp-apresentacao></comp-apresentacao>
+            <comp-diferenciais></comp-diferenciais>
+            <comp-custos></comp-custos>
+            <comp-servicos id="servicos"></comp-servicos>
+            <comp-precos id="precos"></comp-precos>
+            <comp-contato id="contato"></comp-contato>
+            <comp-footer></comp-footer>
+        </div>
 
-			<main>
-				<!-- <section class="box-apresentacao">
-					<div class="texto-maior">
-						<p>Contabilidade Gerencial Completa.</p>
-						<p>
-							Planos A partir de
-							<span>R$ 89,00</span>
-						</p>
-					</div>
-					<div class="texto-menor">
-						<p>
-							Especializado em prestadores de serviço do Simples
-							Nacional.
-						</p>
-						<p>Ajudamos pequenos empreendedores a crescer!</p>
-					</div>
-					<div class="box-apresentacao-botoes">
-						<button>Mostrar Planos</button>
-						<button>Começar Já!</button>
-					</div>
-				</section> -->
+        <!-- SCRIPT JAVASCRIPT PARA O EFEITO DE ROLAGEM -->
+        <script>
+            window.addEventListener('componentePronto', () => {
+                // 1. Pega a tag do componente customizado
+                const componente = document.querySelector('comp-header');
+                // 2. Entra no Shadow DOM dele e busca o ID lá dentro
+                const header =
+                    componente.shadowRoot.getElementById('main-header');
 
-				<!-- <section class="panel-diferenciais">
-                    <div class="panel-diferenciais-titulo">
-                        <p>Nós fazemos mais por você!</p>
-                        <span>COMO PRESTAMOS NOSSOS SERVIÇOS</span>
-                    </div>
+                // const header = document.getElementById('main-header');
 
-                    <div class="panel-diferenciais-detalhamento">
-                        <div class="panel-diferenciais-detalhamento-itens">
-                            <img src="./assets/lixeira.png" alt="" />
-                            <p>Zero Papel</p>
-                            <span>
-                                Operamos de forma digital o que nos torna
-                                ecológicos.
-                            </span>
-                        </div>
-                        <div class="panel-diferenciais-detalhamento-itens">
-                            <img src="./assets/engrenagem.png" alt="" />
-                            <p>Processos</p>
-                            <span>
-                                Processos inteligentes e automatizados evitam
-                                retrabalho.
-                            </s>
-                        </div>
-                        <div class="panel-diferenciais-detalhamento-itens">
-                            <img src="./assets/celular.png" alt="" />
-                            <p>Digital</p>
-                            <span>
-                                Nossa plataforma pode ser acessada por
-                                Smartphones
-                            </p>
-                        </div>
-                    </div>
-                </section> -->
-
-				<!-- <section class="reducao-custos">
-                    <p>QUER REDUZIR CUSTOS COM PESSOAL?</p>
-                    <p>CONSULTE NOSSA TERCEIRIZAÇÃO DO DEPARTAMENTO FINANCEIRO</p>
-                </section> -->
-
-				<!-- <section class="nossos-servicos-section">
-                    <div class="panel-diferenciais">
-                        <p>Nossos Serviços</p>
-                    </div>
-
-                    <div class="nossos-servicos">
-                        <div>
-                            <img src="./assets/pessoal.png" alt="">
-                        </div>
-                        <div>
-                            <span>DEPARTAMENTO PESSOAL</span>
-                            <p>&nbsp;</p>                        
-                            <p>Abrange todos os serviços relacionados a folha de pagamento e manutenção do cadastro de funcionários, assim como registro dos funcionários, de forma integrada.</p>
-                        </div>
-
-                        <div>
-                            <img src="./assets/contabilidade.png" alt="">
-                        </div>
-                        <div>
-                            <span>CONTABILIDADE</span>
-                            <p>&nbsp;</p>                        
-                            <p>A escrituração contábil é planejada e executada de acordo com as Normas Internacionais de Contabilidade – IFRS, adequadas à individualidade de cada empresa e às características das atividades desenvolvidas.</p>
-                        </div>
-
-                         <div>
-                            <img src="./assets/escrita.png" alt="">
-                        </div>
-                        <div>
-                            <span>ESCRITA FISCAL</span>
-                            <p>&nbsp;</p>                        
-                            <p>Prestamos assessoria a pessoas físicas e jurídicas sobre questões tributárias e legais, com a apuração dos devidos impostos e entrega das obrigações acessórias.</p>
-                        </div>
-
-                        <div>
-                            <img src="./assets/pericia.png" alt="">
-                        </div>
-                        <div>
-                            <span>PERÍCIA</span>
-                            <p>&nbsp;</p>                        
-                            <p>Efetuamos cálculos periciais e elaboramos laudos e pareceres técnicos.</p>
-                        </div>
-
-                        <div>
-                            <img src="./assets/bpo.png" alt="">
-                        </div>
-                        <div>
-                            <span>BPO FINANCEIRO</span>
-                            <p>&nbsp;</p>                        
-                            <p>EEconomize terceirizando seu departamento financeiro. Fazemos o contas a pagar/receber, boletos e emissão de notas fiscais.</p>
-                        </div>
-
-                        <div>
-                            <img src="./assets/consultoria.png" alt="">
-                        </div>
-                        <div>
-                            <span>CONSULTORIA</span>
-                            <p>&nbsp;</p>                        
-                            <p>Prestamos consultoria para as empresas visando melhorar seus processos internos, precificação, tributação, etc.</p>
-                        </div>
-                    </div>
-
-                </section> -->
-
-				<!-- <section class="valores">   
-                    <div class="valores-title">
-                        <p class="title">Planos</p>
-                        <p class="sub-title">Valores Mensais</p>
-                    </div>
-
-                    <div class="valores-cards">
-                        <div class="valores-card">
-                            <p class="card-branco-texto1">MEI</p>
-                            <p class="card-branco-texto1">A PARTIR DE</p>
-                            <p class="card-branco-texto2">R$ <span class="card-branco-texto3">89</span></p> 
-                            <p class="card-branco-texto4">MEI</p>
-                            <p class="card-branco-texto5">SEM FUNCIONÁRIOS</p>
-                            <P class="card-branco-texto5">PRESTAÇÃO DE SERVIÇOS</P>
-                            <button class="card-branco-button">QUERO ESSE !</button>                            
-                        </div>
-
-                        <div class="card-black">
-                            <p class="card-branco-texto1">MEI</p>
-                            <p class="card-branco-texto1">A PARTIR DE</p>
-                            <p class="card-branco-texto2">R$ <span class="card-branco-texto3">89</span></p> 
-                            <p class="card-branco-texto4">MEI</p>
-                            <p class="card-branco-texto5">SEM FUNCIONÁRIOS</p>
-                            <P class="card-branco-texto5">PRESTAÇÃO DE SERVIÇOS</P>
-                            <button class="card-branco-button">QUERO ESSE !</button>                            
-                        </div>
-                        
-                        <div class="valores-card">
-                            <p class="card-branco-texto1">MEI</p>
-                            <p class="card-branco-texto1">A PARTIR DE</p>
-                            <p class="card-branco-texto2">R$ <span class="card-branco-texto3">89</span></p> 
-                            <p class="card-branco-texto4">MEI</p>
-                            <p class="card-branco-texto5">SEM FUNCIONÁRIOS</p>
-                            <P class="card-branco-texto5">PRESTAÇÃO DE SERVIÇOS</P>
-                            <button class="card-branco-button">QUERO ESSE !</button>                            
-                        </div>
-
-
-                    </div>
-
-                </section> -->
-
-				<!-- <section class="box-contato">
-                    <div class="box-contato-info">
-                        <p>CONTATO</p>
-                        <P>PORTO ALEGRE/RS</P>
-                        <P>atendimento@makarcontabilidade.com.br</P>
-                        <p>MAKAR CONTABILIDADE LTDA</p>
-                    </div>
-                    <div>
-                        <form action="" class="box-contato-form">
-                            <label for="nome">Nome</label>
-                            <input type="text" name="nome">
-                            <label for="telefone">Telefone</label>
-                            <input type="text" name="telefone">
-                            <label for="e-mail">E-mail</label>
-                            <input type="text" name="e-mail">
-                            <label for="mensagem">Mensagem</label>
-                            <input type="text" name="mensagem">
-                            <input type="button" value="Enviar">
-                        </form>
-
-
-
-                    </div>
-                </section> -->
-
-				<!-- <footer>
-                    <div>
-                        2026 - Makar Contabilidade
-                    </div>
-                </footer> -->
-			</main>
-		</div>
-	</body>
+                window.addEventListener('scroll', () => {
+                    // Se a rolagem vertical passar de 50 pixels
+                    if (window.scrollY > 50) {
+                        // alert(header);
+                        header.classList.add('scroll-active');
+                    } else {
+                        header.classList.remove('scroll-active');
+                    }
+                });
+            });
+        </script>
+    </body>
 </html>

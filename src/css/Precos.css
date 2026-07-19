@@ -1,0 +1,136 @@
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+
+			.price-container {
+				display: flex;
+				flex-direction: column;
+				background-color: gainsboro;
+				/* padding: 40px; */
+			}
+
+			.price-title {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				padding: 20px;
+			}
+
+			.price-title-p1 {
+				font-size: 3.8rem;
+				font-weight: lighter;
+				color: rgb(29, 27, 27);
+			}
+
+			.price-title-p2 {
+				color: gray;
+				font-weight: bold;
+				letter-spacing: 5px;
+				font-size: 1.1rem;
+			}
+
+			.price-table {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				padding: 20px 200px;
+			}
+
+			.price-cards {
+				width: 33.33%;
+				display: flex;
+				flex-direction: column;
+				padding: 10px;
+				align-items: center;
+				justify-content: center;
+				gap: 30px;
+				height: 90%;
+				background-color: white;
+				border-radius: 10px;
+			}
+
+			.price-card-branco-texto1 {
+				color: rgb(29, 27, 27);
+				font-weight: 500;
+				letter-spacing: 2px;
+			}
+
+			.price-card-branco-texto2 {
+				font-size: 2rem;
+				font-weight: lighter;
+				color: gray;
+			}
+
+			.price-card-branco-texto3 {
+				font-size: 3.8rem;
+				font-weight: lighter;
+				color: rgb(29, 27, 27);
+			}
+
+			.price-card-branco-texto4 {
+				color: white;
+				border-bottom: 1px solid white;
+			}
+
+			.price-card-branco-texto5 {
+				color: gray;
+			}
+
+			.price-card-branco-button {
+				width: 150px;
+				height: 60px;
+				background-color: white;
+				border: 2px solid green;
+				border-radius: 40px;
+				color: green;
+				font-weight: bold;
+				margin-top: 35px;
+			}
+
+			/* .price-card-white {
+				height: 100%;
+			} */
+
+			.price-card-black {
+				background-color: black;
+				height: 100%;
+				padding: 40px;
+			}
+
+			/* .card-black {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				padding: 100px;
+				gap: 20px;
+				background-color: black;
+				height: 100%;
+			} */
+
+			.price-card-black {
+				/* display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				padding: 50px;
+				gap: 20px;
+				background-color: black;
+				height: 100%; */
+			}
+
+			@media (max-width: 600px) {
+				.price-table {
+					flex-direction: column;
+					padding: 10px;
+					gap: 20px;
+				}
+
+				.price-cards {
+					width: 70%;
+				}
+			}
